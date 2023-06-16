@@ -1,4 +1,4 @@
-let grade = prompt('Hi there, input student marks');
+let grade = prompt('Hi User! Kindly input student marks');
 function gradeGenerator(){
     //let grade = prompt('Hi there, input student marks');
     if (grade > 79){
