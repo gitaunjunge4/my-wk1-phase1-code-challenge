@@ -17,3 +17,5 @@ function speedDetector(speed){
 
 }
 speedDetector(10);
+speedDetector(80);
+speedDetector(1000);
