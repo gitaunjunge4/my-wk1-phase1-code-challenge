@@ -1,12 +1,25 @@
-const grossSalary = basicSalary + benefits;
-//const taxableIncome = basicSalary + benefits - totalDeductions;
-const totalDeductions = resultNHIF /* NSSFDeductions()*/;
 //const payee = result;
 //const taxableIncome = result - totalDeductions;
-const netSalary = grossSalary - payee - totalDeductions;
+//const taxableIncome = basicSalary + benefits - totalDeductions;
+const grossSalary = basicSalary + benefits;
+const totalDeductions = NHIFDeductions() /* NSSFDeductions()*/;
+const netSalary = grossSalary - payeeCalculator() - totalDeductions;
 
-function calcutateNetSalary(basicSalary, benefits){
-   function NHIFDeductions(grossSalary){
+function payeeCalculator(grossSalary){
+    //const taxableIncome = basicSalary + benefits - totalDeductions;
+    if(grossSalary <= 24000){
+        let payee = grossSalary * 0.1;
+        return payee;
+    }else if (grossSalary >= 24001 && grossSalary <= 32333){
+        let payee = grossSalary * 0.25;
+        return payee;
+    }else if (grossSalary > 32333){
+        let payee = grossSalary * 0.3;
+        return payee;
+    }  
+}
+
+function NHIFDeductions(grossSalary){
     if(grossSalary <= 5999){
         let resultNHIF = grossSalary - 150;
         return resultNHIF;
@@ -76,27 +89,14 @@ function calcutateNetSalary(basicSalary, benefits){
     }
 }
 
+const basicSalary = 30000;
+const benefits = 500;
+//const salaryDetails = calculateNetSalary(basicSalary, benefits);
 
-function payeeCalculator(grossSalary){
-    //const taxableIncome = basicSalary + benefits - totalDeductions;
-    if(grossSalary <= 24000){
-        let result = grossSalary * 0.1;
-        return result;
-    }else if (grossSalary >= 24001 && grossSalary <= 32333){
-        let result = grossSalary * 0.25;
-        return result;
-    }else if (grossSalary > 32333){
-        let result = grossSalary * 0.3;
-        return result;
-    }  
-}
-}
+console.log(netSalary);
 
 
-grossSalaryCalculator();
-basicSalary(12000)
-benefits(500)
-console.log(payee);
+
 
 /*function NSSFDeductions(grossSalary){
     if()
