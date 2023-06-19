@@ -1,4 +1,7 @@
+//prompts the user to input the grade.
 let grade = prompt('Hi User! Kindly input student marks');
+
+//function that is able to assign the given marks with a grade
 function gradeGenerator(){
     //let grade = prompt('Hi there, input student marks');
     if (grade > 79){
@@ -19,4 +22,5 @@ function gradeGenerator(){
         return 'Kindly put a number between 0-100';
     }
 }
+//printing the output
 console.log(gradeGenerator());
