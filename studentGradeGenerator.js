@@ -22,5 +22,6 @@ function gradeGenerator(){
         return 'Kindly put a number between 0-100';
     }
 }
+
 //printing the output
 console.log(gradeGenerator());

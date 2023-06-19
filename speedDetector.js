@@ -1,3 +1,4 @@
+//function for speed
 function speedDetector(speed){
     const speedLimit = 70;
     const kmAboveSpeedLimit = 5;
@@ -16,6 +17,8 @@ function speedDetector(speed){
     // return 0;
 
 }
+
+//calling the function and giving it some sample arguments 
 speedDetector(10);
 speedDetector(80);
 speedDetector(1000);
