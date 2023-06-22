@@ -2,8 +2,8 @@
 //const taxableIncome = result - totalDeductions;
 //const taxableIncome = basicSalary + benefits - totalDeductions;
 const grossSalary = basicSalary + benefits;
-const totalDeductions = NHIFDeductions() /* NSSFDeductions()*/;
-const netSalary = grossSalary - payeeCalculator() - totalDeductions;
+const totalDeductions = NHIFDeductions /* NSSFDeductions()*/;
+const netSalary = grossSalary - payeeCalculator - totalDeductions;
 
 function payeeCalculator(grossSalary){
     //const taxableIncome = basicSalary + benefits - totalDeductions;
@@ -34,6 +34,7 @@ function NHIFDeductions(grossSalary){
     }
     else if(grossSalary>= 12000 && grossSalary <= 14999){
         let resultNHIF = grossSalary - 500
+        return resultNHIF;
     }
     else if(grossSalary>= 15000 && grossSalary <= 19999){
         let resultNHIF = grossSalary - 600;
