@@ -2,7 +2,7 @@
 //const taxableIncome = result - totalDeductions;
 //const taxableIncome = basicSalary + benefits - totalDeductions;
 const grossSalary = basicSalary + benefits;
-const totalDeductions = NHIFDeductions /* NSSFDeductions()*/;
+const totalDeductions = NHIFDeductions() /* NSSFDeductions()*/;
 const netSalary = grossSalary - payeeCalculator - totalDeductions;
 
 function payeeCalculator(grossSalary){
